@@ -420,7 +420,7 @@ const products = {
     weight: "200ml",
     img: "images/p30r.png",
     desc: "Cold-pressed castor oil, rich in fatty acids and vitamin E. Nourishes skin, strengthens hair, and supports natural healing.",
-    video: "images/p1v.mp4",
+    video: "images/p2v.mp4",
     gallery: [
       { type: "image", src: "images/p30.png" },
       { type: "image", src: "images/p30r.png" },
