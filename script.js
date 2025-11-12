@@ -410,7 +410,7 @@ const products = {
     video: "images/p29v.mp4",
     gallery: [
       { type: "image", src: "images/p29.png" },
-      { type: "image", src: "images/p29r.png" },
+      { type: "image", src: "images/p30r.png" },
     ],
   },
   product30: {
@@ -423,7 +423,7 @@ const products = {
     video: "images/p2v.mp4",
     gallery: [
       { type: "image", src: "images/p30.png" },
-      { type: "image", src: "images/p30r.png" },
+      { type: "image", src: "images/p29r.png" },
     ],
   },
   product31: {
@@ -433,7 +433,7 @@ const products = {
     weight: "100ml",
     img: "images/p31r.png",
     desc: "Herbal Hair Oil is made with natural ingredients that help reduce hair fall, strengthen roots, and promote healthy growth. Regular use supports scalp health and improves overall hair texture.",
-    video: "images/product20_recipe.mp4",
+    video: "images/p1v.mp4",
     gallery: [
       { type: "image", src: "images/p31.png" },
       { type: "image", src: "images/p31r.png" },
