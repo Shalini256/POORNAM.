@@ -415,7 +415,7 @@ const products = {
   },
   product30: {
     name: "Castor Oil",
-    options: [{ weight: "100ml", price: 90.00 }],
+    options: [{ weight: "200ml", price: 90.00 }],
     basePrice: 90,
     weight: "200ml",
     img: "images/p30r.png",
