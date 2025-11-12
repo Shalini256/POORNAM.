@@ -275,7 +275,7 @@ const products = {
     name: "Karuppu Kavuni, Mapillai Samba, Poongar Adai Dosa Mix",
     options: [
        { weight: "250g", price: 120.00 },
-       { weight: "500g", price: 120.00 }
+       { weight: "500g", price: 240.00 }
     ],
     basePrice: 120,
     weight: "250g",
