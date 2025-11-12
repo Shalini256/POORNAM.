@@ -401,7 +401,6 @@ const products = {
     name: "Hill Honey / Mazhai Then",
     options: [
         { weight: "250ml", price: 195.00 },
-    
     ],
     basePrice: 195,
     weight: "250ml",
