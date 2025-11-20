@@ -136,7 +136,7 @@ const products = {
     weight: "250g / 500g",
     img: "images/p11rr.png",
     desc: "Nutrient-rich porridge mix from Mapillai Samba rice. Easy to digest, energizing, and perfect for a wholesome breakfast.",
-    video: "images/p11v.mp4",
+    video: "p11v.mp4",
     gallery: [
       { type: "image", src: "images/p11.png" },
       { type: "image", src: "images/p11r.png" },
@@ -217,7 +217,7 @@ const products = {
     weight: "250g / 500g",
     img: "images/p16.png",
     desc: "A ready-to-cook pongal mix made from Poongar rice. Nourishing and flavorful, ideal for a traditional, healthy meal.",
-    video: "images/p16v.mp4",
+    video: "p40v.mp4",
     gallery: [
       { type: "image", src: "images/p16.png" },
       { type: "image", src: "images/p16r.png" },
