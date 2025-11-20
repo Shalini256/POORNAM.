@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poornam Naturals - Premium Natural Products</title>
+    <title>Pooranam Naturals - Premium Natural Products</title>
     <!-- Add Font Awesome for WhatsApp icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -75,7 +75,7 @@
         header {
             background: #4CAF50;
             color: #fff;
-            padding: 25px 40px;
+            padding: 20px 60px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -102,10 +102,10 @@
             padding: 20px 0;
             background: rgba(255, 255, 255, 0.1);
             position: fixed;
-            top: 90px;
+            top: 80px;
             left: 0;
             right: 0;
-            z-index: 998;
+            z-index: 999;
             backdrop-filter: blur(5px);
         }
 
@@ -525,7 +525,7 @@
         .product-content { padding: 1.5rem; }
         .product-card h3 { font-size: 1.125rem; margin-bottom: 0.5rem; transition: color 0.3s ease; }
         .product-card:hover h3 { color: var(--rich-gold); }
-        .product-card p { font-size: 0.875rem; color: rgba(26, 20, 16, 0.6); margin-bottom: 1rem; }
+        .product-card p { font-size: 0.875rem; color: rgba(3, 3, 3, 0.8); margin-bottom: 1rem; }
         .product-footer { display: flex; justify-content: space-between; align-items: center; }
         .price { font-size: 1.5rem; font-weight: 700; color: var(--rich-gold); }
         .section-cta { text-align: center; }
@@ -792,103 +792,105 @@
         }
 
         /* Responsive Design */
-        @media (max-width: 768px) {
+        @media (max-width: 768px)
+        {
             * { box-sizing: border-box; }
-            
+
             body {
                 width: 100vw;
                 overflow-x: hidden;
                 margin: 0;
                 padding: 0;
             }
-            
+
             .hamburger { display: flex; }
             .desktop-nav { display: none; }
-            header { 
-                padding: 10px 15px; 
+            header {
+                padding: 20px 40px;
                 width: 100vw;
                 box-sizing: border-box;
             }
-            header .logo { font-size: 1.1em; }
+            header .logo { font-size: 1em;}
             
             .hero {
                 width: 100vw;
                 height: 100vh;
                 padding: 0;
                 margin: 0;
+                padding-top: 11rem;
             }
-            
+
             .hero-content {
                 width: 100%;
                 padding: 0 20px;
                 box-sizing: border-box;
             }
-            
+
             .container {
                 width: 100vw;
                 padding: 0 15px;
                 margin: 0;
                 box-sizing: border-box;
             }
-            
+
             .cards-grid {
                 width: 100%;
                 padding: 0;
                 gap: 15px;
             }
-            
+
             .card {
                 width: 100%;
                 margin: 0;
                 box-sizing: border-box;
             }
-            
-            .story-grid { 
+
+            .story-grid {
                 grid-template-columns: 1fr;
                 width: 100%;
                 gap: 20px;
             }
             .story-image { height: 18rem; }
-            .contact-methods { 
+            .contact-methods {
                 grid-template-columns: 1fr;
                 width: 100%;
                 gap: 15px;
             }
-            
-            h1 { 
+
+            h1 {
                 font-size: 1.5rem;
                 line-height: 1.2;
                 margin: 0 0 15px 0;
             }
-            h2 { 
+            h2 {
                 font-size: 1.6rem;
                 margin: 0 0 15px 0;
             }
-            .section-header p { 
+            .section-header p {
                 font-size: 0.95rem;
                 margin: 0;
             }
-            .hero-content p { 
+            .hero-content p {
                 font-size: 0.85rem;
                 margin: 0 0 20px 0;
             }
-            
+
             .center-logo {
-                top: 60px;
+                top: 30px;
                 width: 100%;
                 text-align: center;
             }
-            
+
             .center-logo img {
-                height: 45px;
+                height: 70px;
             }
-            
+
             section {
                 width: 100vw;
                 padding: 40px 0;
                 margin: 0;
             }
-            
+
             .btn-explore {
                 padding: 12px 25px;
                 font-size: 1rem;
@@ -897,28 +899,28 @@
         }
         
         @media (max-width: 480px) {
-            header { padding: 8px 12px; }
-            header .logo { font-size: 1rem; }
-            
+            header { padding: 5px 12px; }
+            header .logo { font-size: 0.8rem; }
+
             .hero-content {
-                padding: 0 15px;
+                padding: 0 25px;
             }
-            
+
             .container {
-                padding: 0 12px;
+                padding: 0 20px;
             }
-            
+
             h1 { font-size: 1.3rem; }
             h2 { font-size: 1.4rem; }
-            
+
             .center-logo {
-                top: 55px;
+                top: 90px;
             }
-            
+
             .center-logo img {
-                height: 40px;
+                height: 50px;
             }
-            
+
             .btn-explore {
                 padding: 10px 20px;
                 font-size: 0.9rem;
@@ -941,7 +943,7 @@
         
         <div class="logo">
             <img src="images/img.gif" alt="Logo" />
-            Poornam Naturals
+            Pooranam Healthy & Home Fresh
         </div>
         
         <nav class="desktop-nav">
@@ -954,7 +956,7 @@
     </header>
 
     <div class="center-logo">
-        <img src="images/mathi-logo.png" alt="Center Logo">
+        <img src="images/logo.png" alt="Center Logo">
     </div>
 
     <div class="sidebar" id="sidebar">
@@ -988,7 +990,7 @@
     <section id="why-us" class="why-us section-bg-warm">
         <div class="container">
             <div class="section-header fade-in">
-                <h2>Why Choose Poornam Naturals?</h2>
+                <h2>Why Choose Pooranam Naturals?</h2>
                 <p>We're committed to bringing you the purest, most authentic natural products that nourish body and soul.</p>
             </div>
 
@@ -1000,9 +1002,9 @@
                             <path d="M12 2l2 4h4l-3 3 1 4-4-2-4 2 1-4-3-3h4l2-4z"/>
                         </svg>
                     </div>
-                    <h3>Pure & Organic</h3>
-                    <p>All ingredients are sourced from certified organic farms. No chemicals, no additives, just nature's best.</p>
-                </div>
+                    <h3>Authentic & Healthy</h3>
+                    <p>Wholesome mixes made from Heritage Rice varieties, created to nourish your body with ease and authenticity.</p>                </div>
+
 
                 <!-- Card 2: Traditional Methods -->
                 <div class="card hover-lift fade-in-up">
@@ -1176,7 +1178,7 @@
         </ul>
 
         <p class="footer-text">
-            © 2025 Poornam Naturals | Taste the Tradition
+            © 2025 Pooranam Naturals | Taste the Tradition
         </p>
 
         <button class="scroll-top" onclick="window.scrollTo({top:0, behavior:'smooth'});">
@@ -1184,35 +1186,22 @@
         </button>
     </footer>
 
-    <!-- Google Translate Script -->
-    <script>
-        // Set default language based on cookie (before Google loads)
-        (function() {
-            var lang = (document.cookie.match(/(^|;\s*)googtrans=\/en\/(\w+)/) || [])[2];
-            if (lang) {
-                var newCookie = "/en/" + lang;
-                document.cookie = "googtrans=" + newCookie + ";path=/;max-age=31536000";
-                if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
-                    document.cookie = "googtrans=" + newCookie + ";path=/;domain=" + location.hostname + ";max-age=31536000";
-                }
-            }
-        })();
-    </script>
-
+    <!-- Language System -->
+    <script src="language-fix.js"></script>
+    
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
                 pageLanguage: 'en',
                 includedLanguages: 'en,ta',
-                layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+                layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+                autoDisplay: false
             }, 'google_translate_element');
         }
     </script>
-
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <script>
-        // Save user-selected language to cookie
         document.addEventListener('DOMContentLoaded', function() {
             // Hide Google Translate powered by text
             function hideGoogleTranslateText() {
@@ -1229,43 +1218,11 @@
                             span.remove();
                         }
                     });
-                    // Also try to hide by text content
-                    const allSpans = document.querySelectorAll('.goog-te-gadget-simple span');
-                    allSpans.forEach(span => {
-                        if (span.innerText && (span.innerText.includes('Powered') || span.innerText.includes('Translate'))) {
-                            span.style.display = 'none !important';
-                        }
-                    });
                 }
             }
             
-            // Run immediately and on mutations
             hideGoogleTranslateText();
             setTimeout(hideGoogleTranslateText, 1000);
-            
-            const observer = new MutationObserver(() => {
-                hideGoogleTranslateText();
-                const iframe = document.querySelector('iframe.goog-te-menu-frame');
-                if (iframe) {
-                    try {
-                        const items = iframe.contentDocument.querySelectorAll('.goog-te-menu2-item span.text');
-                        items.forEach(span => {
-                            span.addEventListener('click', function() {
-                                const lang = span.innerText.toLowerCase().includes("tamil") ? 'ta' : 'en';
-                                const val = '/en/' + lang;
-                                document.cookie = 'googtrans=' + val + ';path=/;max-age=31536000';
-                                if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
-                                    document.cookie = 'googtrans=' + val + ';path=/;domain=' + location.hostname + ';max-age=31536000';
-                                }
-                            });
-                        });
-                    } catch (err) {
-                        console.warn("Translate frame error", err);
-                    }
-                }
-            });
-
-            observer.observe(document.body, { childList: true, subtree: true });
         });
 
         // Function to open product details directly
