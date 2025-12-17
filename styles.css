@@ -90,6 +90,20 @@ header .logo {
   margin-left: clamp(5px, 1.5vw, 20px);
 }
 
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.slogan {
+  font-size: 0.75em;
+  font-weight: 400;
+  color: #ffffff;
+  font-style: italic;
+  margin-top: 2px;
+}
+
 header .logo img {
   width: 40px;
   height: 40px;
@@ -926,8 +940,9 @@ footer p {
       
       .hamburger { display: flex; }
       .desktop-nav { display: none; }
-      header { padding: 15px 20px; }
+      header { padding: 20px 20px; }
       header .logo { font-size: 0.9em; }
+      .slogan { font-size: 0.65em; }
       
       .detail-container {
         max-width: 98%;
@@ -980,6 +995,10 @@ footer p {
     }
 
     /* Mobile Phones */
+    @media (max-width: 480px) {
+      .slogan { font-size: 0.6em; }
+    }
+    
     @media (max-width: 300px) {
 
       .product-card img { height: 100px; width: 100px; }
