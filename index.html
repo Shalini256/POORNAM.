@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pooranam Naturals - Premium Natural Products</title>
+    
+    <title>Pooranam Naturals</title>
+    
     <!-- Add Font Awesome for WhatsApp icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -131,6 +133,20 @@
             font-weight: bold;
             color: #b6f36c;
             margin-left: clamp(5px, 1.5vw, 20px);
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+        
+        .slogan {
+            font-size: 0.75em;
+            font-weight: 400;
+            color: #ffffff;
+            font-style: italic;
+            margin-top: 2px;
         }
 
         header .logo img {
@@ -811,6 +827,7 @@
                 box-sizing: border-box;
             }
             header .logo { font-size: 1em;}
+            .slogan { font-size: 0.5em; }
             
             .hero {
                 width: 100vw;
@@ -897,10 +914,56 @@
                 width: auto;
             }
         }
+        .product-list 
+        {
+         max-width: 500px;
+         margin: 0 auto;
+       }
+
+    .product-item 
+{
+    padding: 15px 20px;
+    margin-bottom: 12px;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    background: #ffffff;
+    transition: all 0.3s ease;
+  }
+
+.product-item:hover {
+    background: #e8f5e9;
+    transform: translateX(5px);
+}
+
+.product-item {
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  background-color: #ffffff;
+  transition: background-color 0.35s ease, transform 0.25s ease;
+}
+
+/* Hover effect */
+.product-item:hover {
+  background-color: #f5f8f1;
+}
+
+/* ✅ Clicked (active) item */
+.product-item.active {
+  background-color: #9eef76;   /* light green */
+  transform: translateX(6px);
+}
+
+
         
         @media (max-width: 480px) {
             header { padding: 5px 12px; }
             header .logo { font-size: 0.8rem; }
+            .slogan { font-size: 0.6em; }
 
             .hero-content {
                 padding: 0 25px;
@@ -942,8 +1005,11 @@
         </div>
         
         <div class="logo">
-            <img src="images/img.gif" alt="Logo" />
-            Pooranam Healthy & Home Fresh
+            <img src="images/img.gif" alt="Pooranam Naturals Logo - Cold Pressed Oils and Heritage Rice Products" />
+            <div class="logo-text">
+                Pooranam Healthy & Home Fresh
+                <div class="slogan">The Sign Of Perfect Health</div>
+            </div>
         </div>
         
         <nav class="desktop-nav">
@@ -956,7 +1022,7 @@
     </header>
 
     <div class="center-logo">
-        <img src="images/logo.png" alt="Center Logo">
+        <img src="images/logo.png" alt="Pooranam Naturals - Premium Natural Products Brand Logo">
     </div>
 
     <div class="sidebar" id="sidebar">
@@ -995,16 +1061,16 @@
             </div>
 
             <div class="cards-grid">
-                <!-- Card 1: Pure & Organic -->
+                <!-- Card 1: Special Features -->
                 <div class="card hover-lift fade-in-up">
                     <div class="card-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2l2 4h4l-3 3 1 4-4-2-4 2 1-4-3-3h4l2-4z"/>
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                     </div>
-                    <h3>Authentic & Healthy</h3>
-                    <p>Wholesome mixes made from Heritage Rice varieties, created to nourish your body with ease and authenticity.</p>                </div>
-
+                    <h3>Special about our product</h3>
+                    <p>Easy to cook, homemade quality products perfect for breakfast and dinner, completely free from chemicals and preservatives.</p>
+                </div>
 
                 <!-- Card 2: Traditional Methods -->
                 <div class="card hover-lift fade-in-up">
@@ -1030,6 +1096,20 @@
             </div>
         </div>
     </section>
+
+    <section id="product-names" class="why-us section-bg-warm">
+    <div class="container">
+        <div class="section-header fade-in">
+            <h2>Our Products</h2>
+            <p>Click a product to view details</p>
+        </div>
+
+        <div class="product-list" id="productList"></div>
+        <div class="view-more-container" id="viewMoreContainer" style="text-align: center; margin-top: 20px; display: none;">
+            <button class="btn btn-primary" id="viewMoreBtn" onclick="showMoreProducts()">View More Products</button>
+        </div>
+    </div>
+</section>
 
     <!-- Featured Products Section -->
     <section id="products" class="featured-products">
@@ -1284,6 +1364,72 @@
                 observer.observe(el);
             });
         });
+        const products = [
+  { name: "Super Food from Traditional Rice - Karuppu Kavuni Kanji/Porridge Ready Mix", id :"karupu_kavuni" },
+  { name: "Super Food from Traditional Rice - Karuppu Kavuni Pongal Ready Mix", id :"product9" },
+  { name: "Super Food from Traditional Rice - Mapillai Samba Kanji/Porridge Ready Mix",  id :"product11"  },
+  { name: "Super Food from Traditional Rice - Mapillai Samba Pongal Ready Mix",  id :"product12"  },
+  { name: "Super Food from Traditional Rice - Mapillai Samba Puttu Ready Mix",  id :"product13"  },
+  { name: "Super Food from Traditional Rice - Poongar Kanji/Porridge Ready Mix",  id :"product15"  },
+  { name: "Super Food from Traditional Rice - Poongar Pongal Ready Mix",  id :"product16"  },
+  { name: "Super Food from Traditional Rice - Poongar Puttu Ready Mix",  id :"product17"  },
+  { name: "Super Food from Traditional Rice - Kattuyanam Kanji/Porridge Ready Mix", id :"product22" },
+  { name: "Super Food from Traditional Rice - Kattuyanam Pongal Ready Mix",  id :"product23"  },
+  { name: "Super Food from Traditional Rice - Kattuyanam Puttu Ready Mix",  id :"product24"  },
+  { name: "A Nutrient Rich Millets Dosa – Multi Millet Dosa Ready Mix",  id :"product19"  },
+  { name: "Protein Rich Delicious Dosa – Karuppu Kavuni, Mapillai Samba, Poongar Adai Dosa Ready Mix",  id :"product20"  },
+  { name: "Power Packed Nutri Mix for Mom & Kids", id :"product21"  },
+  { name: "Cold Pressed Groundnut Oil", id: "product2" },
+  { name: "Cold Pressed Gingely Oil", id: "product4" },
+  { name: "Cold Pressed Coconut Oil", id: "product6" },
+  { name: "Hill Honey / Mazhai Then", id: "product29" },
+  { name: "Castor Oil", id: "product30" },
+  { name: "Herbal Hair Oil", id: "product31" }
+];
+
+let currentlyShown = 6;
+const productListDiv = document.getElementById("productList");
+const viewMoreContainer = document.getElementById("viewMoreContainer");
+
+function createProductItem(product) {
+    const div = document.createElement("div");
+    div.className = "product-item";
+    div.innerText = product.name;
+
+    div.onclick = () => {
+        document.querySelectorAll(".product-item")
+            .forEach(item => item.classList.remove("active"));
+        div.classList.add("active");
+        setTimeout(() => {
+            openProductDetail(product.id);
+        }, 220);
+    };
+    return div;
+}
+
+function showMoreProducts() {
+    // Show all remaining products at once
+    const remainingProducts = products.slice(currentlyShown);
+    remainingProducts.forEach(product => {
+        productListDiv.appendChild(createProductItem(product));
+    });
+    
+    // Hide the View More button after showing all products
+    viewMoreContainer.style.display = "none";
+}
+
+if (productListDiv) {
+    // Show initial 6 products
+    products.slice(0, currentlyShown).forEach(product => {
+        productListDiv.appendChild(createProductItem(product));
+    });
+    
+    // Show View More button if there are more products
+    if (products.length > currentlyShown) {
+        viewMoreContainer.style.display = "block";
+    }
+}
+
     </script>
 </body>
 </html>
