@@ -110,6 +110,20 @@ header .logo {
   margin-left: clamp(5px, 1.5vw, 20px);
 }
 
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.slogan {
+  font-size: 0.75em;
+  font-weight: 400;
+  color: #ffffff;
+  font-style: italic;
+  margin-top: 2px;
+}
+
 header .logo img {
   width: 40px;  /* Height is 40px */
   height: 40px;
@@ -736,10 +750,12 @@ footer p {
         width:100%;
     }
     
-    /* Show hamburger, hide desktop nav */
+    /* Show hamburger, hide desktop nav, increase header size and hide logo */
     .hamburger { display: flex; }
     .desktop-nav { display: none; }
-    header { padding: 15px 20px; }
+    .logo { display: none; }
+    header { padding: 25px 20px; }
+    .slogan { font-size: 0.65em; }
 
     /* Reposition translate dropdown */
     #google_translate_element {
@@ -755,6 +771,8 @@ footer p {
 }
 
 @media (max-width: 480px) {
+  .slogan { font-size: 0.6em; }
+  
   #google_translate_element select {
     padding: 4px 5px;
     font-size: 10px;
@@ -802,7 +820,10 @@ footer p {
   
   <div class="logo">
     <img src="img.gif" alt="Logo" />
-    Pooranam Healthy & Home Fresh
+    <div class="logo-text">
+      Poornam Healthy & Home Fresh
+      <div class="slogan">The Sign Of Perfect Health</div>
+    </div>
   </div>
   
   <nav class="desktop-nav">
@@ -942,6 +963,18 @@ footer p {
 </footer>
 
 <script src="script.js"></script>
+<script src="language-fix.js"></script>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,ta',
+      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <script>
   // Set default language based on cookie (before Google loads)
@@ -949,45 +982,16 @@ footer p {
     var lang = (document.cookie.match(/(^|;\s*)googtrans=\/en\/(\w+)/) || [])[2];
     if (lang) {
       var newCookie = "/en/" + lang;
-      document.cookie = "googtrans=" + newCookie + ";path=/;max-age=31536000";
-      if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
-        document.cookie = "googtrans=" + newCookie + ";path=/;domain=" + location.hostname + ";max-age=31536000";
-      }
+      document.cookie = "googtrans=" + newCookie + ";path=/";
+      document.cookie = "googtrans=" + newCookie + ";path=/;domain=" + location.hostname;
     }
   })();
 </script>
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      includedLanguages: 'en,ta',
-      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
-    }, 'google_translate_element');
-  }
-</script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 <script>
   // Save user-selected language to cookie
   document.addEventListener('DOMContentLoaded', function() {
-    // Hide Google Translate powered by text
-    function hideGoogleTranslateText() {
-      const translateElement = document.querySelector('.goog-te-gadget-simple');
-      if (translateElement) {
-        const spans = translateElement.querySelectorAll('span');
-        spans.forEach(span => {
-          if (span.textContent.includes('Powered by') || span.textContent.includes('Google Translate')) {
-            span.style.display = 'none';
-          }
-        });
-      }
-    }
-    
-    // Run immediately and on mutations
-    hideGoogleTranslateText();
-    setTimeout(hideGoogleTranslateText, 1000);
-    
     const observer = new MutationObserver(() => {
-      hideGoogleTranslateText();
       const iframe = document.querySelector('iframe.goog-te-menu-frame');
       if (iframe) {
         try {
@@ -996,10 +1000,8 @@ footer p {
             span.addEventListener('click', function() {
               const lang = span.innerText.toLowerCase().includes("tamil") ? 'ta' : 'en';
               const val = '/en/' + lang;
-              document.cookie = 'googtrans=' + val + ';path=/;max-age=31536000';
-              if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
-                document.cookie = 'googtrans=' + val + ';path=/;domain=' + location.hostname + ';max-age=31536000';
-              }
+              document.cookie = 'googtrans=' + val + ';path=/';
+              document.cookie = 'googtrans=' + val + ';path=/;domain=' + location.hostname;
             });
           });
         } catch (err) {
