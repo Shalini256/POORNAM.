@@ -1105,9 +1105,6 @@
         </div>
 
         <div class="product-list" id="productList"></div>
-        <div class="view-more-container" id="viewMoreContainer" style="text-align: center; margin-top: 20px; display: none;">
-            <button class="btn btn-primary" id="viewMoreBtn" onclick="showMoreProducts()">View More Products</button>
-        </div>
     </div>
 </section>
 
@@ -1379,22 +1376,15 @@
   { name: "A Nutrient Rich Millets Dosa – Multi Millet Dosa Ready Mix",  id :"product19"  },
   { name: "Protein Rich Delicious Dosa – Karuppu Kavuni, Mapillai Samba, Poongar Adai Dosa Ready Mix",  id :"product20"  },
   { name: "Power Packed Nutri Mix for Mom & Kids", id :"product21"  },
-  { name: "Cold Pressed Groundnut Oil", id: "product2" },
-  { name: "Cold Pressed Gingely Oil", id: "product4" },
-  { name: "Cold Pressed Coconut Oil", id: "product6" },
-  { name: "Hill Honey / Mazhai Then", id: "product29" },
-  { name: "Castor Oil", id: "product30" },
-  { name: "Herbal Hair Oil", id: "product31" }
 ];
 
-let currentlyShown = 6;
 const productListDiv = document.getElementById("productList");
-const viewMoreContainer = document.getElementById("viewMoreContainer");
 
-function createProductItem(product) {
+function createProductItem(product, index = 0) {
     const div = document.createElement("div");
     div.className = "product-item";
     div.innerText = product.name;
+    div.style.animationDelay = `${index * 0.1}s`;
 
     div.onclick = () => {
         document.querySelectorAll(".product-item")
@@ -1407,27 +1397,11 @@ function createProductItem(product) {
     return div;
 }
 
-function showMoreProducts() {
-    // Show all remaining products at once
-    const remainingProducts = products.slice(currentlyShown);
-    remainingProducts.forEach(product => {
-        productListDiv.appendChild(createProductItem(product));
-    });
-    
-    // Hide the View More button after showing all products
-    viewMoreContainer.style.display = "none";
-}
-
 if (productListDiv) {
-    // Show initial 6 products
-    products.slice(0, currentlyShown).forEach(product => {
-        productListDiv.appendChild(createProductItem(product));
+    // Show all products at once
+    products.forEach((product, index) => {
+        productListDiv.appendChild(createProductItem(product, index));
     });
-    
-    // Show View More button if there are more products
-    if (products.length > currentlyShown) {
-        viewMoreContainer.style.display = "block";
-    }
 }
 
     </script>
